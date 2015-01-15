@@ -13,7 +13,16 @@ h1 {
   text-align: center;
 }
 button {
-  padding: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #eee;
+}
+button:hover {
+  background-image: linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1))
+}
+button:active {
+  border: 1px solid #777;
 }
 .margins {
   margin-left: auto;
@@ -40,7 +49,7 @@ form {
 form ul {
   margin-left: auto;
   margin-right: auto;
-  width: 400px;
+  width: 450px;
   list-style: none;
 }
 form ul li {
@@ -49,12 +58,16 @@ form ul li {
   position: relative;
 }
 form label {
-  width: 250px;
+  width: 130px;
+  display: inline-block;
   margin-top: 3px;
   padding: 3px;
 }
 .input {
-  height: 20px;
+  height: 30px;
   width: 220px;
   padding: 5px 8px;
+}
+#add-submit {
+  margin-left: 60px;
 }
