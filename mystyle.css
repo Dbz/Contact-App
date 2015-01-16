@@ -79,3 +79,9 @@ img {
   object-fit: cover;
   border-radius: 10px;
 }
+.name {
+  font-weight: bold;
+}
+.number {
+  color: #888;
+}
