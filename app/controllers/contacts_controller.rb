@@ -10,12 +10,11 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.save
       @contact = Contact.new
-      redirect_to root_url
     else
       flash[:errors] = @contact.errors.full_messages
       flash[:contact_params] = contact_params
-      redirect_to root_url
     end
+    redirect_to root_url
   end
   
   def destroy

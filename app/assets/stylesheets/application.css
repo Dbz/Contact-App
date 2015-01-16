@@ -65,12 +65,13 @@ td {
   padding-bottom: 15px;
 }
 textarea {
-  width: 500px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 450px;
   height: 300px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  visibility: hidden;
 }
 form ul {
   margin-left: auto;
@@ -94,7 +95,7 @@ form label {
   width: 220px;
   padding: 5px 8px;
 }
-#add-submit {
+#add-submit, #import-submit {
   margin-left: 60px;
 }
 img {
@@ -110,5 +111,11 @@ img {
   color: #888;
 }
 .red {
-  color: red;
+  color: rgb(202, 60, 60);
+}
+.show {
+  transition: display 400ms;
+}
+.hide {
+  display: none;
 }

@@ -15,12 +15,12 @@
     <% end %>
   </table>
   <div id='buttons' class='margins'>
-    <button> Add Contact </button>
-    <button> Import Contacts </button>
-    <button> Export Contacts </button>
+    <button id='add-contact-button'> Add Contact </button>
+    <button id='import-contacts-button'> Import Contacts </button>
+    <button id='export-contacts-button'> Export Contacts </button>
   </div>
 
-    <form action='<%= contacts_url %>' method='POST' class='form'>
+    <form action='<%= contacts_url %>' method='POST' class='form show' id='add-contact-form'>
       <input
         type="hidden"
         name="authenticity_token"
@@ -56,7 +56,14 @@
       <button type='submit' id='add-submit'>Add To Contacts</button>
     </form>
     
-    <textarea></textarea>
+    <form class='form hide' id='import-contacts-form'>
+      <textarea name='contacts[json]'></textarea>
+      <button type='submit' id='import-submit'>Import Contacts</button>
+    </form>
+    
+    <form class='form hide' id='export-contacts-form'>
+      <textarea></textarea>
+    </form>
 
 </body>
 </html>
