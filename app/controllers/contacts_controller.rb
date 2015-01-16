@@ -17,6 +17,13 @@ class ContactsController < ApplicationController
     redirect_to root_url
   end
   
+  def import
+    JSON.parse(params[:contacts][:json]).each do |person|
+      @contact = Contact.create(person)
+    end
+    redirect_to root_url
+  end
+  
   def destroy
     @contact = Contact.find(params[:id])
     @contact.destroy

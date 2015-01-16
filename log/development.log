@@ -9132,3 +9132,830 @@ Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-15 22:43:24 -
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 22:43:24 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 23:32:43 -0800
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (1.3ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (102.9ms)
+Completed 200 OK in 624ms (Views: 604.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-15 23:32:44 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 23:32:44 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-15 23:32:44 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 23:32:44 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 23:32:44 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 23:32:44 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 23:32:44 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 23:35:20 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (6.4ms)[0m  SELECT "contacts".* FROM "contacts"
+  Rendered contacts/index.html.erb within layouts/application (111.9ms)
+Completed 500 Internal Server Error in 160ms
+
+NoMethodError - undefined method `except' for #<String:0x007fb450c620d0>:
+  app/views/contacts/index.html.erb:65:in `_app_views_contacts_index_html_erb___3459635350114158009_70206158169420'
+  actionview (4.1.7) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.1.7) lib/active_support/notifications.rb:161:in `instrument'
+  actionview (4.1.7) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.7) lib/action_view/template.rb:143:in `render'
+  actionview (4.1.7) lib/action_view/renderer/template_renderer.rb:55:in `block (2 levels) in render_template'
+  actionview (4.1.7) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.1.7) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.7) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.7) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.7) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionview (4.1.7) lib/action_view/renderer/template_renderer.rb:54:in `block in render_template'
+  actionview (4.1.7) lib/action_view/renderer/template_renderer.rb:62:in `render_with_layout'
+  actionview (4.1.7) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.1.7) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionview (4.1.7) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.7) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.7) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.7) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.7) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.7) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.7) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.7) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.7) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.7) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/dbz/.rbenv/versions/2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.7) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.7) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  app/controllers/contacts_controller.rb:5:in `index'
+  actionpack (4.1.7) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.7) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.7) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.7) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.7) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.7) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.7) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.7) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.7) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.7) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.7) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.7) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.7) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.7) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.7) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.7) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.7) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.7) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.7) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.7) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.7) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.7) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/dbz/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/dbz/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/dbz/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/9e4aa727f29a76b7/variables" for 127.0.0.1 at 2015-01-15 23:35:21 -0800
+
+
+Started POST "/__better_errors/9e4aa727f29a76b7/eval" for 127.0.0.1 at 2015-01-15 23:35:29 -0800
+
+
+Started POST "/__better_errors/9e4aa727f29a76b7/eval" for 127.0.0.1 at 2015-01-15 23:35:36 -0800
+
+
+Started POST "/__better_errors/9e4aa727f29a76b7/eval" for 127.0.0.1 at 2015-01-15 23:36:10 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 23:37:49 -0800
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (1.1ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (71.8ms)
+Completed 200 OK in 458ms (Views: 446.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 23:37:50 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 23:37:50 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-15 23:37:50 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 23:37:50 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-15 23:37:50 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 23:37:50 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 23:37:50 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 23:42:19 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (1.0ms)[0m  SELECT "contacts".* FROM "contacts"
+  Rendered contacts/index.html.erb within layouts/application (65.3ms)
+Completed 200 OK in 633ms (Views: 599.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 23:42:20 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 23:42:20 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 23:42:20 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-15 23:42:20 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-15 23:42:20 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 23:42:20 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 23:42:20 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 23:47:11 -0800
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (1.2ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (101.6ms)
+Completed 200 OK in 509ms (Views: 474.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 23:47:12 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 23:47:12 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-15 23:47:12 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 23:47:12 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-15 23:47:12 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 23:47:12 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 23:47:12 -0800
+
+
+Started POST "/contacts/import" for 127.0.0.1 at 2015-01-15 23:47:18 -0800
+Processing by ContactsController#import as HTML
+  Parameters: {"authenticity_token"=>"aciqbRtD6O+VYwy0DCZyCI3kNCXnABzItLspEIe1T8k=", "contacts"=>{"json"=>"[{\"first_name\":\"Ned\",\"last_name\":\"Stark\",\"phone_number\":\"654-563-4102\",\"image\":\"http://i.dailymail.co.uk/i/pix/2014/05/10/article-2625187-1DBA0F6200000578-443_306x423.jpg\"},{\"first_name\":\"Robb\",\"last_name\":\"Stark\",\"phone_number\":\"654-563-4372\",\"image\":\"http://vignette3.wikia.nocookie.net/vampirediaries/images/e/e4/Robb_Stark.jpg/revision/latest?cb=20140411010003\"},{\"first_name\":\"Arya\",\"last_name\":\"Stark\",\"phone_number\":\"654-563-4304\",\"image\":\"http://flavorwire.files.wordpress.com/2013/07/screen-shot-2013-07-01-at-5-27-11-pm.png\"},{\"first_name\":\"Little\",\"last_name\":\"Finger\",\"phone_number\":\"654-563-4309\",\"image\":\"http://i.imgur.com/6JHgc18.gif\"},{\"first_name\":\"Daniel\",\"last_name\":\"Burt\",\"phone_number\":\"654-563-4302\",\"image\":\"http://dbz.rocks/include/img/profile/me.jpg\"}]"}}
+Redirected to http://localhost:3000/
+Completed 302 Found in 338986ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 23:52:57 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (1.2ms)[0m  SELECT "contacts".* FROM "contacts"
+  Rendered contacts/index.html.erb within layouts/application (60.5ms)
+Completed 200 OK in 410ms (Views: 386.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-15 23:52:58 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 23:52:58 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 23:52:58 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 23:52:58 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 23:52:58 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-15 23:52:58 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 23:52:58 -0800
+
+
+Started POST "/contacts/import" for 127.0.0.1 at 2015-01-15 23:53:05 -0800
+Processing by ContactsController#import as HTML
+  Parameters: {"authenticity_token"=>"aciqbRtD6O+VYwy0DCZyCI3kNCXnABzItLspEIe1T8k=", "contacts"=>{"json"=>"[{\"first_name\":\"Ned\",\"last_name\":\"Stark\",\"phone_number\":\"654-563-4102\",\"image\":\"http://i.dailymail.co.uk/i/pix/2014/05/10/article-2625187-1DBA0F6200000578-443_306x423.jpg\"},{\"first_name\":\"Robb\",\"last_name\":\"Stark\",\"phone_number\":\"654-563-4372\",\"image\":\"http://vignette3.wikia.nocookie.net/vampirediaries/images/e/e4/Robb_Stark.jpg/revision/latest?cb=20140411010003\"},{\"first_name\":\"Arya\",\"last_name\":\"Stark\",\"phone_number\":\"654-563-4304\",\"image\":\"http://flavorwire.files.wordpress.com/2013/07/screen-shot-2013-07-01-at-5-27-11-pm.png\"},{\"first_name\":\"Little\",\"last_name\":\"Finger\",\"phone_number\":\"654-563-4309\",\"image\":\"http://i.imgur.com/6JHgc18.gif\"},{\"first_name\":\"Daniel\",\"last_name\":\"Burt\",\"phone_number\":\"654-563-4302\",\"image\":\"http://dbz.rocks/include/img/profile/me.jpg\"}]"}}
+Redirected to http://localhost:3000/
+Completed 302 Found in 19382ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 23:53:25 -0800
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (0.8ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 301ms (Views: 297.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 23:53:25 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-15 23:53:25 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 23:53:25 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 23:53:25 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-15 23:53:25 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 23:53:25 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 23:53:25 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 23:53:46 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  Rendered contacts/index.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 337ms (Views: 323.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 23:53:47 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 23:53:47 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 23:53:47 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 23:53:47 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-15 23:53:47 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-15 23:53:47 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 23:53:47 -0800
+
+
+Started POST "/contacts/import" for 127.0.0.1 at 2015-01-15 23:53:53 -0800
+Processing by ContactsController#import as HTML
+  Parameters: {"authenticity_token"=>"aciqbRtD6O+VYwy0DCZyCI3kNCXnABzItLspEIe1T8k=", "contacts"=>{"json"=>"[{\"first_name\":\"Ned\",\"last_name\":\"Stark\",\"phone_number\":\"654-563-4102\",\"image\":\"http://i.dailymail.co.uk/i/pix/2014/05/10/article-2625187-1DBA0F6200000578-443_306x423.jpg\"},{\"first_name\":\"Robb\",\"last_name\":\"Stark\",\"phone_number\":\"654-563-4372\",\"image\":\"http://vignette3.wikia.nocookie.net/vampirediaries/images/e/e4/Robb_Stark.jpg/revision/latest?cb=20140411010003\"},{\"first_name\":\"Arya\",\"last_name\":\"Stark\",\"phone_number\":\"654-563-4304\",\"image\":\"http://flavorwire.files.wordpress.com/2013/07/screen-shot-2013-07-01-at-5-27-11-pm.png\"},{\"first_name\":\"Little\",\"last_name\":\"Finger\",\"phone_number\":\"654-563-4309\",\"image\":\"http://i.imgur.com/6JHgc18.gif\"},{\"first_name\":\"Daniel\",\"last_name\":\"Burt\",\"phone_number\":\"654-563-4302\",\"image\":\"http://dbz.rocks/include/img/profile/me.jpg\"}]"}}
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "contacts" ("created_at", "first_name", "image", "last_name", "phone_number", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2015-01-16 07:53:53.712794"], ["first_name", "Ned"], ["image", "http://i.dailymail.co.uk/i/pix/2014/05/10/article-2625187-1DBA0F6200000578-443_306x423.jpg"], ["last_name", "Stark"], ["phone_number", "654-563-4102"], ["updated_at", "2015-01-16 07:53:53.712794"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "contacts" ("created_at", "first_name", "image", "last_name", "phone_number", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-01-16 07:53:53.731199"], ["first_name", "Robb"], ["image", "http://vignette3.wikia.nocookie.net/vampirediaries/images/e/e4/Robb_Stark.jpg/revision/latest?cb=20140411010003"], ["last_name", "Stark"], ["phone_number", "654-563-4372"], ["updated_at", "2015-01-16 07:53:53.731199"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "contacts" ("created_at", "first_name", "image", "last_name", "phone_number", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2015-01-16 07:53:53.746443"], ["first_name", "Arya"], ["image", "http://flavorwire.files.wordpress.com/2013/07/screen-shot-2013-07-01-at-5-27-11-pm.png"], ["last_name", "Stark"], ["phone_number", "654-563-4304"], ["updated_at", "2015-01-16 07:53:53.746443"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "contacts" ("created_at", "first_name", "image", "last_name", "phone_number", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-01-16 07:53:53.761047"], ["first_name", "Little"], ["image", "http://i.imgur.com/6JHgc18.gif"], ["last_name", "Finger"], ["phone_number", "654-563-4309"], ["updated_at", "2015-01-16 07:53:53.761047"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "contacts" ("created_at", "first_name", "image", "last_name", "phone_number", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2015-01-16 07:53:53.779107"], ["first_name", "Daniel"], ["image", "http://dbz.rocks/include/img/profile/me.jpg"], ["last_name", "Burt"], ["phone_number", "654-563-4302"], ["updated_at", "2015-01-16 07:53:53.779107"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 89ms (ActiveRecord: 12.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 23:53:53 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  Rendered contacts/index.html.erb within layouts/application (47.7ms)
+Completed 200 OK in 328ms (Views: 323.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 23:53:54 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 23:53:54 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 23:53:54 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-15 23:53:54 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-15 23:53:54 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 23:53:54 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 23:53:54 -0800
+
+
+Started POST "/contacts/import" for 127.0.0.1 at 2015-01-15 23:54:12 -0800
+Processing by ContactsController#import as HTML
+  Parameters: {"authenticity_token"=>"aciqbRtD6O+VYwy0DCZyCI3kNCXnABzItLspEIe1T8k=", "contacts"=>{"json"=>"[{\"first_name\":\"Ned!\",\"last_name\":\"Stark\",\"phone_number\":\"654-563-4102\",\"image\":\"http://i.dailymail.co.uk/i/pix/2014/05/10/article-2625187-1DBA0F6200000578-443_306x423.jpg\"},{\"first_name\":\"Robb!\",\"last_name\":\"Stark\",\"phone_number\":\"654-563-4372\",\"image\":\"http://vignette3.wikia.nocookie.net/vampirediaries/images/e/e4/Robb_Stark.jpg/revision/latest?cb=20140411010003\"},{\"first_name\":\"Ary!a\",\"last_name\":\"Stark\",\"phone_number\":\"654-563-4304\",\"image\":\"http://flavorwire.files.wordpress.com/2013/07/screen-shot-2013-07-01-at-5-27-11-pm.png\"},{\"first_name\":\"Little!\",\"last_name\":\"Finger\",\"phone_number\":\"654-563-4309\",\"image\":\"http://i.imgur.com/6JHgc18.gif\"},{\"first_name\":\"Daniel!\",\"last_name\":\"Burt\",\"phone_number\":\"654-563-4302\",\"image\":\"http://dbz.rocks/include/img/profile/me.jpg\"}]"}}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "contacts" ("created_at", "first_name", "image", "last_name", "phone_number", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2015-01-16 07:54:12.482834"], ["first_name", "Ned!"], ["image", "http://i.dailymail.co.uk/i/pix/2014/05/10/article-2625187-1DBA0F6200000578-443_306x423.jpg"], ["last_name", "Stark"], ["phone_number", "654-563-4102"], ["updated_at", "2015-01-16 07:54:12.482834"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "first_name", "image", "last_name", "phone_number", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-01-16 07:54:12.498293"], ["first_name", "Robb!"], ["image", "http://vignette3.wikia.nocookie.net/vampirediaries/images/e/e4/Robb_Stark.jpg/revision/latest?cb=20140411010003"], ["last_name", "Stark"], ["phone_number", "654-563-4372"], ["updated_at", "2015-01-16 07:54:12.498293"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "contacts" ("created_at", "first_name", "image", "last_name", "phone_number", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2015-01-16 07:54:12.518646"], ["first_name", "Ary!a"], ["image", "http://flavorwire.files.wordpress.com/2013/07/screen-shot-2013-07-01-at-5-27-11-pm.png"], ["last_name", "Stark"], ["phone_number", "654-563-4304"], ["updated_at", "2015-01-16 07:54:12.518646"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "contacts" ("created_at", "first_name", "image", "last_name", "phone_number", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2015-01-16 07:54:12.532526"], ["first_name", "Little!"], ["image", "http://i.imgur.com/6JHgc18.gif"], ["last_name", "Finger"], ["phone_number", "654-563-4309"], ["updated_at", "2015-01-16 07:54:12.532526"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "contacts" ("created_at", "first_name", "image", "last_name", "phone_number", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", "2015-01-16 07:54:12.547155"], ["first_name", "Daniel!"], ["image", "http://dbz.rocks/include/img/profile/me.jpg"], ["last_name", "Burt"], ["phone_number", "654-563-4302"], ["updated_at", "2015-01-16 07:54:12.547155"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 86ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 23:54:12 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.8ms)[0m  SELECT "contacts".* FROM "contacts"
+  Rendered contacts/index.html.erb within layouts/application (63.1ms)
+Completed 200 OK in 332ms (Views: 326.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:13 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:13 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:13 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:13 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:13 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:13 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:13 -0800
+
+
+Started DELETE "/contacts/26" for 127.0.0.1 at 2015-01-15 23:54:22 -0800
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aciqbRtD6O+VYwy0DCZyCI3kNCXnABzItLspEIe1T8k=", "id"=>"26"}
+  [1m[36mContact Load (0.6ms)[0m  [1mSELECT  "contacts".* FROM "contacts"  WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 26]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "contacts" WHERE "contacts"."id" = ?[0m  [["id", 26]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 23:54:22 -0800
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (1.3ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (68.9ms)
+Completed 200 OK in 337ms (Views: 331.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:22 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:22 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:22 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:22 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:22 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:22 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:22 -0800
+
+
+Started DELETE "/contacts/27" for 127.0.0.1 at 2015-01-15 23:54:26 -0800
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aciqbRtD6O+VYwy0DCZyCI3kNCXnABzItLspEIe1T8k=", "id"=>"27"}
+  [1m[35mContact Load (0.3ms)[0m  SELECT  "contacts".* FROM "contacts"  WHERE "contacts"."id" = ? LIMIT 1  [["id", 27]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "contacts" WHERE "contacts"."id" = ?  [["id", 27]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 23:54:26 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.7ms)[0m  SELECT "contacts".* FROM "contacts"
+  Rendered contacts/index.html.erb within layouts/application (69.4ms)
+Completed 200 OK in 342ms (Views: 337.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:27 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:27 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:27 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:27 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:27 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:27 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:27 -0800
+
+
+Started DELETE "/contacts/28" for 127.0.0.1 at 2015-01-15 23:54:28 -0800
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aciqbRtD6O+VYwy0DCZyCI3kNCXnABzItLspEIe1T8k=", "id"=>"28"}
+  [1m[36mContact Load (0.4ms)[0m  [1mSELECT  "contacts".* FROM "contacts"  WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 28]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "contacts" WHERE "contacts"."id" = ?[0m  [["id", 28]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 23:54:28 -0800
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (0.8ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (57.6ms)
+Completed 200 OK in 334ms (Views: 328.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:28 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:28 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:28 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:28 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:28 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:28 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:28 -0800
+
+
+Started DELETE "/contacts/29" for 127.0.0.1 at 2015-01-15 23:54:29 -0800
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aciqbRtD6O+VYwy0DCZyCI3kNCXnABzItLspEIe1T8k=", "id"=>"29"}
+  [1m[35mContact Load (0.3ms)[0m  SELECT  "contacts".* FROM "contacts"  WHERE "contacts"."id" = ? LIMIT 1  [["id", 29]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "contacts" WHERE "contacts"."id" = ?  [["id", 29]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 23:54:29 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.7ms)[0m  SELECT "contacts".* FROM "contacts"
+  Rendered contacts/index.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 333ms (Views: 328.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:29 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:29 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:29 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:29 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:29 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:29 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:29 -0800
+
+
+Started DELETE "/contacts/30" for 127.0.0.1 at 2015-01-15 23:54:30 -0800
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aciqbRtD6O+VYwy0DCZyCI3kNCXnABzItLspEIe1T8k=", "id"=>"30"}
+  [1m[36mContact Load (0.7ms)[0m  [1mSELECT  "contacts".* FROM "contacts"  WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 30]]
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "contacts" WHERE "contacts"."id" = ?[0m  [["id", 30]]
+  [1m[35m (2.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 23:54:30 -0800
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (1.1ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (52.8ms)
+Completed 200 OK in 323ms (Views: 314.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:30 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:31 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:31 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:31 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:31 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:31 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:31 -0800
+
+
+Started DELETE "/contacts/31" for 127.0.0.1 at 2015-01-15 23:54:31 -0800
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aciqbRtD6O+VYwy0DCZyCI3kNCXnABzItLspEIe1T8k=", "id"=>"31"}
+  [1m[35mContact Load (0.4ms)[0m  SELECT  "contacts".* FROM "contacts"  WHERE "contacts"."id" = ? LIMIT 1  [["id", 31]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "contacts" WHERE "contacts"."id" = ?  [["id", 31]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 23:54:31 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.9ms)[0m  SELECT "contacts".* FROM "contacts"
+  Rendered contacts/index.html.erb within layouts/application (53.3ms)
+Completed 200 OK in 336ms (Views: 330.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:32 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:32 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:32 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:32 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:32 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:32 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:32 -0800
+
+
+Started DELETE "/contacts/32" for 127.0.0.1 at 2015-01-15 23:54:32 -0800
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aciqbRtD6O+VYwy0DCZyCI3kNCXnABzItLspEIe1T8k=", "id"=>"32"}
+  [1m[36mContact Load (0.4ms)[0m  [1mSELECT  "contacts".* FROM "contacts"  WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 32]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "contacts" WHERE "contacts"."id" = ?[0m  [["id", 32]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 23:54:32 -0800
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (0.6ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 316ms (Views: 309.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:33 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:33 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:33 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:33 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:33 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:33 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:33 -0800
+
+
+Started DELETE "/contacts/33" for 127.0.0.1 at 2015-01-15 23:54:33 -0800
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aciqbRtD6O+VYwy0DCZyCI3kNCXnABzItLspEIe1T8k=", "id"=>"33"}
+  [1m[35mContact Load (0.3ms)[0m  SELECT  "contacts".* FROM "contacts"  WHERE "contacts"."id" = ? LIMIT 1  [["id", 33]]
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "contacts" WHERE "contacts"."id" = ?  [["id", 33]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 23:54:33 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  Rendered contacts/index.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 310ms (Views: 305.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:34 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:34 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:34 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:34 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:34 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:34 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:34 -0800
+
+
+Started DELETE "/contacts/34" for 127.0.0.1 at 2015-01-15 23:54:34 -0800
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aciqbRtD6O+VYwy0DCZyCI3kNCXnABzItLspEIe1T8k=", "id"=>"34"}
+  [1m[36mContact Load (0.6ms)[0m  [1mSELECT  "contacts".* FROM "contacts"  WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 34]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "contacts" WHERE "contacts"."id" = ?[0m  [["id", 34]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 23:54:34 -0800
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (0.7ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 293ms (Views: 287.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:35 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:35 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:35 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:35 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:35 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:35 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:35 -0800
+
+
+Started DELETE "/contacts/35" for 127.0.0.1 at 2015-01-15 23:54:35 -0800
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aciqbRtD6O+VYwy0DCZyCI3kNCXnABzItLspEIe1T8k=", "id"=>"35"}
+  [1m[35mContact Load (0.4ms)[0m  SELECT  "contacts".* FROM "contacts"  WHERE "contacts"."id" = ? LIMIT 1  [["id", 35]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "contacts" WHERE "contacts"."id" = ?  [["id", 35]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 23:54:35 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.7ms)[0m  SELECT "contacts".* FROM "contacts"
+  Rendered contacts/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 299ms (Views: 293.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:36 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 23:54:36 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:36 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:36 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:36 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:36 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 23:54:36 -0800

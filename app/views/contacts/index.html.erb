@@ -56,13 +56,17 @@
       <button type='submit' id='add-submit'>Add To Contacts</button>
     </form>
     
-    <form class='form hide' id='import-contacts-form'>
+    <form class='form hide' action='<%= contacts_import_url %>' id='import-contacts-form' method='POST'>
+      <input
+        type="hidden"
+        name="authenticity_token"
+        value="<%= form_authenticity_token %>">
       <textarea name='contacts[json]'></textarea>
       <button type='submit' id='import-submit'>Import Contacts</button>
     </form>
     
     <form class='form hide' id='export-contacts-form'>
-      <textarea></textarea>
+      <textarea><%= @contacts.to_json(except: [:created_at, :updated_at, :id]) %></textarea>
     </form>
 
 </body>
