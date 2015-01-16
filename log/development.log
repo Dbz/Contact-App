@@ -12183,3 +12183,356 @@ Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 00:54:21 
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 00:54:21 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (3.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateContacts (20150116013909)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (63.0ms)[0m  [1mCREATE TABLE "contacts" ("id" serial primary key, "first_name" character varying(255), "last_name" character varying(255), "phone_number" character varying(255), "image" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150116013909"]]
+  [1m[36m (3.4ms)[0m  [1mCOMMIT[0m
+Migrating to UpdateContact (20150116054928)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.7ms)[0m  [1mALTER TABLE "contacts" ALTER COLUMN "image" TYPE character varying(255)[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "contacts" ALTER COLUMN "image" SET DEFAULT 'https://www.etsy.com/images/avatars/default_avatar_75px.png'
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150116054928"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to RemoveDefaultImage (20150116055328)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.3ms)[0m  ALTER TABLE "contacts" ALTER COLUMN "image" SET DEFAULT NULL
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150116055328"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to FirstAndLastNameUniquenessConstraint (20150116075647)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.4ms)[0m  CREATE UNIQUE INDEX  "index_contacts_on_first_name_and_last_name_and_phone_number" ON "contacts"  ("first_name", "last_name", "phone_number")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150116075647"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateEvents (20150116082942)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (8.8ms)[0m  CREATE TABLE "events" ("id" serial primary key, "type" character varying(255), "times" integer DEFAULT 0, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX  "index_events_on_type" ON "events"  ("type")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150116082942"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to ChangeEventTypeToName (20150116083544)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.5ms)[0m  [1mALTER TABLE "events" DROP "type"[0m
+  [1m[35m (1.1ms)[0m  ALTER TABLE "events" ADD COLUMN "name" character varying(255)
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150116083544"]]
+  [1m[35m (28.2ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 01:05:47 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (1.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (3.9ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (35.4ms)
+Completed 500 Internal Server Error in 67ms
+
+NoMethodError - undefined method `times' for nil:NilClass:
+  app/helpers/application_helper.rb:5:in `display_events'
+  app/views/contacts/index.html.erb:74:in `_app_views_contacts_index_html_erb__322288050606719926_70255196835740'
+  actionview (4.1.7) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.1.7) lib/active_support/notifications.rb:161:in `instrument'
+  actionview (4.1.7) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.7) lib/action_view/template.rb:143:in `render'
+  actionview (4.1.7) lib/action_view/renderer/template_renderer.rb:55:in `block (2 levels) in render_template'
+  actionview (4.1.7) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.1.7) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.7) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.7) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.7) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionview (4.1.7) lib/action_view/renderer/template_renderer.rb:54:in `block in render_template'
+  actionview (4.1.7) lib/action_view/renderer/template_renderer.rb:62:in `render_with_layout'
+  actionview (4.1.7) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.1.7) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionview (4.1.7) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.7) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.7) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.7) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.7) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.7) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.7) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.7) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.7) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.7) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/dbz/.rbenv/versions/2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.7) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.7) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  app/controllers/contacts_controller.rb:5:in `index'
+  actionpack (4.1.7) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.7) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.7) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.7) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.7) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.7) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.7) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.7) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.7) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.7) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.7) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.7) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.7) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.7) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.7) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.7) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.7) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.7) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.7) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.7) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.7) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.7) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.7) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.7) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.7) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.7) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.7) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.7) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.7) lib/rails/engine.rb:514:in `call'
+  railties (4.1.7) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/dbz/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/dbz/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/dbz/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/687e285146bf2fb8/variables" for 127.0.0.1 at 2015-01-16 01:05:48 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mEvent Load (1.5ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mEvent Exists (0.9ms)[0m  SELECT  1 AS one FROM "events"  WHERE "events"."name" = 'add_contact' LIMIT 1
+  [1m[36mSQL (3.1ms)[0m  [1mINSERT INTO "events" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2015-01-16 09:05:59.096246"], ["name", "add_contact"], ["updated_at", "2015-01-16 09:05:59.096246"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mEvent Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "events"  WHERE "events"."name" = 'import_contacts' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "events" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2015-01-16 09:05:59.106672"], ["name", "import_contacts"], ["updated_at", "2015-01-16 09:05:59.106672"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mEvent Exists (0.3ms)[0m  SELECT  1 AS one FROM "events"  WHERE "events"."name" = 'delete_contact' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "events" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2015-01-16 09:05:59.110335"], ["name", "delete_contact"], ["updated_at", "2015-01-16 09:05:59.110335"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mContact Load (2.5ms)[0m  [1mSELECT  "contacts".* FROM "contacts"  WHERE "contacts"."first_name" = 'Daniel' AND "contacts"."last_name" = 'Burt' AND "contacts"."phone_number" = '654-563-4302' AND "contacts"."image" = 'http://dbz.rocks/include/img/profile/me.jpg'  ORDER BY "contacts"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mContact Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE ("contacts"."phone_number" = '654-563-4302' AND "contacts"."first_name" = 'Daniel' AND "contacts"."last_name" = 'Burt') LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "contacts" ("created_at", "first_name", "image", "last_name", "phone_number", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2015-01-16 09:05:59.137409"], ["first_name", "Daniel"], ["image", "http://dbz.rocks/include/img/profile/me.jpg"], ["last_name", "Burt"], ["phone_number", "654-563-4302"], ["updated_at", "2015-01-16 09:05:59.137409"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mContact Load (0.8ms)[0m  SELECT  "contacts".* FROM "contacts"  WHERE "contacts"."first_name" = 'Ned' AND "contacts"."last_name" = 'Stark' AND "contacts"."phone_number" = '654-563-4102' AND "contacts"."image" = 'http://i.dailymail.co.uk/i/pix/2014/05/10/article-2625187-1DBA0F6200000578-443_306x423.jpg'  ORDER BY "contacts"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mContact Exists (0.4ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE ("contacts"."phone_number" = '654-563-4102' AND "contacts"."first_name" = 'Ned' AND "contacts"."last_name" = 'Stark') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "contacts" ("created_at", "first_name", "image", "last_name", "phone_number", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2015-01-16 09:05:59.143537"], ["first_name", "Ned"], ["image", "http://i.dailymail.co.uk/i/pix/2014/05/10/article-2625187-1DBA0F6200000578-443_306x423.jpg"], ["last_name", "Stark"], ["phone_number", "654-563-4102"], ["updated_at", "2015-01-16 09:05:59.143537"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mContact Load (0.6ms)[0m  [1mSELECT  "contacts".* FROM "contacts"  WHERE "contacts"."first_name" = 'Robb' AND "contacts"."last_name" = 'Stark' AND "contacts"."phone_number" = '654-563-4372' AND "contacts"."image" = 'http://vignette3.wikia.nocookie.net/vampirediaries/images/e/e4/Robb_Stark.jpg/revision/latest?cb=20140411010003'  ORDER BY "contacts"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mContact Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE ("contacts"."phone_number" = '654-563-4372' AND "contacts"."first_name" = 'Robb' AND "contacts"."last_name" = 'Stark') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "contacts" ("created_at", "first_name", "image", "last_name", "phone_number", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2015-01-16 09:05:59.147778"], ["first_name", "Robb"], ["image", "http://vignette3.wikia.nocookie.net/vampirediaries/images/e/e4/Robb_Stark.jpg/revision/latest?cb=20140411010003"], ["last_name", "Stark"], ["phone_number", "654-563-4372"], ["updated_at", "2015-01-16 09:05:59.147778"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mContact Load (0.8ms)[0m  SELECT  "contacts".* FROM "contacts"  WHERE "contacts"."first_name" = 'Arya' AND "contacts"."last_name" = 'Stark' AND "contacts"."phone_number" = '654-563-4304' AND "contacts"."image" = 'http://flavorwire.files.wordpress.com/2013/07/screen-shot-2013-07-01-at-5-27-11-pm.png'  ORDER BY "contacts"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mContact Exists (0.6ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE ("contacts"."phone_number" = '654-563-4304' AND "contacts"."first_name" = 'Arya' AND "contacts"."last_name" = 'Stark') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "contacts" ("created_at", "first_name", "image", "last_name", "phone_number", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2015-01-16 09:05:59.153211"], ["first_name", "Arya"], ["image", "http://flavorwire.files.wordpress.com/2013/07/screen-shot-2013-07-01-at-5-27-11-pm.png"], ["last_name", "Stark"], ["phone_number", "654-563-4304"], ["updated_at", "2015-01-16 09:05:59.153211"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mContact Load (0.6ms)[0m  [1mSELECT  "contacts".* FROM "contacts"  WHERE "contacts"."first_name" = 'Little' AND "contacts"."last_name" = 'Finger' AND "contacts"."phone_number" = '654-563-4309' AND "contacts"."image" = 'http://i.imgur.com/6JHgc18.gif'  ORDER BY "contacts"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mContact Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE ("contacts"."phone_number" = '654-563-4309' AND "contacts"."first_name" = 'Little' AND "contacts"."last_name" = 'Finger') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "contacts" ("created_at", "first_name", "image", "last_name", "phone_number", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2015-01-16 09:05:59.157999"], ["first_name", "Little"], ["image", "http://i.imgur.com/6JHgc18.gif"], ["last_name", "Finger"], ["phone_number", "654-563-4309"], ["updated_at", "2015-01-16 09:05:59.157999"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mEvent Load (1.3ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mEvent Exists (1.5ms)[0m  SELECT  1 AS one FROM "events"  WHERE ("events"."name" = 'add_contact' AND "events"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "events" SET "times" = $1, "updated_at" = $2 WHERE "events"."id" = 1[0m  [["times", 1], ["updated_at", "2015-01-16 09:05:59.164582"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mEvent Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "events"  WHERE ("events"."name" = 'add_contact' AND "events"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "events" SET "times" = $1, "updated_at" = $2 WHERE "events"."id" = 1  [["times", 2], ["updated_at", "2015-01-16 09:05:59.171105"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mEvent Exists (0.3ms)[0m  SELECT  1 AS one FROM "events"  WHERE ("events"."name" = 'add_contact' AND "events"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "events" SET "times" = $1, "updated_at" = $2 WHERE "events"."id" = 1[0m  [["times", 3], ["updated_at", "2015-01-16 09:05:59.174779"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mEvent Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "events"  WHERE ("events"."name" = 'add_contact' AND "events"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "events" SET "times" = $1, "updated_at" = $2 WHERE "events"."id" = 1  [["times", 4], ["updated_at", "2015-01-16 09:05:59.178115"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mEvent Exists (0.3ms)[0m  SELECT  1 AS one FROM "events"  WHERE ("events"."name" = 'add_contact' AND "events"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "events" SET "times" = $1, "updated_at" = $2 WHERE "events"."id" = 1[0m  [["times", 5], ["updated_at", "2015-01-16 09:05:59.181783"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 01:06:00 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.8ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.9ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 112ms (Views: 108.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 01:06:01 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 01:06:01 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 01:06:01 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 01:06:01 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 01:06:01 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 01:06:01 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 01:06:01 -0800
+
+
+Started POST "/contacts" for 127.0.0.1 at 2015-01-16 01:06:14 -0800
+Processing by ContactsController#create as HTML
+  Parameters: {"authenticity_token"=>"aciqbRtD6O+VYwy0DCZyCI3kNCXnABzItLspEIe1T8k=", "contact"=>{"first_name"=>"John", "last_name"=>"Doe", "phone_number"=>"NA", "image"=>""}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mContact Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE ("contacts"."phone_number" = 'NA' AND "contacts"."first_name" = 'John' AND "contacts"."last_name" = 'Doe') LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "contacts" ("created_at", "first_name", "image", "last_name", "phone_number", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2015-01-16 09:06:14.530363"], ["first_name", "John"], ["image", "https://www.etsy.com/images/avatars/default_avatar_75px.png"], ["last_name", "Doe"], ["phone_number", "NA"], ["updated_at", "2015-01-16 09:06:14.530363"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mEvent Load (0.7ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mEvent Exists (0.9ms)[0m  SELECT  1 AS one FROM "events"  WHERE ("events"."name" = 'add_contact' AND "events"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "events" SET "times" = $1, "updated_at" = $2 WHERE "events"."id" = 1[0m  [["times", 6], ["updated_at", "2015-01-16 09:06:14.541116"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 34ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 01:06:14 -0800
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (0.5ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  [1m[35mEvent Load (0.7ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  Rendered contacts/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 59ms (Views: 56.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 01:06:14 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 01:06:14 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 01:06:14 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 01:06:14 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 01:06:14 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 01:06:14 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 01:06:14 -0800
+
+
+Started POST "/contacts/import" for 127.0.0.1 at 2015-01-16 01:06:25 -0800
+Processing by ContactsController#import as HTML
+  Parameters: {"authenticity_token"=>"aciqbRtD6O+VYwy0DCZyCI3kNCXnABzItLspEIe1T8k=", "contacts"=>{"json"=>"[{\"first_name\":\"Daniel\",\"last_name\":\"Burt\",\"phone_number\":\"654-563-4302\",\"image\":\"http://dbz.rocks/include/img/profile/me.jpg\"},{\"first_name\":\"Ned\",\"last_name\":\"Stark\",\"phone_number\":\"654-563-4102\",\"image\":\"http://i.dailymail.co.uk/i/pix/2014/05/10/article-2625187-1DBA0F6200000578-443_306x423.jpg\"},{\"first_name\":\"Robb\",\"last_name\":\"Stark\",\"phone_number\":\"654-563-4372\",\"image\":\"http://vignette3.wikia.nocookie.net/vampirediaries/images/e/e4/Robb_Stark.jpg/revision/latest?cb=20140411010003\"},{\"first_name\":\"Arya\",\"last_name\":\"Stark\",\"phone_number\":\"654-563-4304\",\"image\":\"http://flavorwire.files.wordpress.com/2013/07/screen-shot-2013-07-01-at-5-27-11-pm.png\"},{\"first_name\":\"Little\",\"last_name\":\"Finger\",\"phone_number\":\"654-563-4309\",\"image\":\"http://i.imgur.com/6JHgc18.gif\"},{\"first_name\":\"Jane\",\"last_name\":\"Doe\",\"phone_number\":\"NA\",\"image\":\"https://www.etsy.com/images/avatars/default_avatar_75px.png\"}]"}}
+  [1m[36mContact Load (1.2ms)[0m  [1mSELECT  "contacts".* FROM "contacts"  WHERE "contacts"."first_name" = 'Daniel' AND "contacts"."last_name" = 'Burt' AND "contacts"."phone_number" = '654-563-4302' AND "contacts"."image" = 'http://dbz.rocks/include/img/profile/me.jpg'  ORDER BY "contacts"."id" ASC LIMIT 1[0m
+  [1m[35mContact Load (0.7ms)[0m  SELECT  "contacts".* FROM "contacts"  WHERE "contacts"."first_name" = 'Ned' AND "contacts"."last_name" = 'Stark' AND "contacts"."phone_number" = '654-563-4102' AND "contacts"."image" = 'http://i.dailymail.co.uk/i/pix/2014/05/10/article-2625187-1DBA0F6200000578-443_306x423.jpg'  ORDER BY "contacts"."id" ASC LIMIT 1
+  [1m[36mContact Load (0.9ms)[0m  [1mSELECT  "contacts".* FROM "contacts"  WHERE "contacts"."first_name" = 'Robb' AND "contacts"."last_name" = 'Stark' AND "contacts"."phone_number" = '654-563-4372' AND "contacts"."image" = 'http://vignette3.wikia.nocookie.net/vampirediaries/images/e/e4/Robb_Stark.jpg/revision/latest?cb=20140411010003'  ORDER BY "contacts"."id" ASC LIMIT 1[0m
+  [1m[35mContact Load (0.7ms)[0m  SELECT  "contacts".* FROM "contacts"  WHERE "contacts"."first_name" = 'Arya' AND "contacts"."last_name" = 'Stark' AND "contacts"."phone_number" = '654-563-4304' AND "contacts"."image" = 'http://flavorwire.files.wordpress.com/2013/07/screen-shot-2013-07-01-at-5-27-11-pm.png'  ORDER BY "contacts"."id" ASC LIMIT 1
+  [1m[36mContact Load (0.6ms)[0m  [1mSELECT  "contacts".* FROM "contacts"  WHERE "contacts"."first_name" = 'Little' AND "contacts"."last_name" = 'Finger' AND "contacts"."phone_number" = '654-563-4309' AND "contacts"."image" = 'http://i.imgur.com/6JHgc18.gif'  ORDER BY "contacts"."id" ASC LIMIT 1[0m
+  [1m[35mContact Load (0.8ms)[0m  SELECT  "contacts".* FROM "contacts"  WHERE "contacts"."first_name" = 'Jane' AND "contacts"."last_name" = 'Doe' AND "contacts"."phone_number" = 'NA' AND "contacts"."image" = 'https://www.etsy.com/images/avatars/default_avatar_75px.png'  ORDER BY "contacts"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mContact Exists (0.5ms)[0m  SELECT  1 AS one FROM "contacts"  WHERE ("contacts"."phone_number" = 'NA' AND "contacts"."first_name" = 'Jane' AND "contacts"."last_name" = 'Doe') LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "contacts" ("created_at", "first_name", "image", "last_name", "phone_number", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2015-01-16 09:06:25.076842"], ["first_name", "Jane"], ["image", "https://www.etsy.com/images/avatars/default_avatar_75px.png"], ["last_name", "Doe"], ["phone_number", "NA"], ["updated_at", "2015-01-16 09:06:25.076842"]]
+  [1m[35m (1.5ms)[0m  COMMIT
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mEvent Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "events"  WHERE ("events"."name" = 'import_contacts' AND "events"."id" != 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "events" SET "times" = $1, "updated_at" = $2 WHERE "events"."id" = 2  [["times", 1], ["updated_at", "2015-01-16 09:06:25.084588"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 01:06:25 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.5ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.9ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.7ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 54ms (Views: 51.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 01:06:25 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 01:06:25 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 01:06:25 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 01:06:25 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 01:06:25 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 01:06:25 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 01:06:25 -0800
