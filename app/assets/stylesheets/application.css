@@ -1,0 +1,102 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+* :focus {
+  outline: none;
+}
+body {
+	font-family: helvetica;
+	color: #555;
+}
+h1 {
+  padding: 50px 0 10px 0;
+  text-align: center;
+  border-bottom: 1px solid #aaa;
+  width: 700px;
+}
+.center {
+  text-align: center;
+}
+button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #eee;
+}
+button:hover {
+  background-image: linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1))
+}
+button:active {
+  border: 1px solid #777;
+}
+.margins {
+  margin-left: auto;
+  margin-right: auto;
+/*  display: block;*/
+  text-align: center;
+}
+td {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#buttons {
+  margin-top: 25px;
+}
+form {
+  margin-top: 30px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 15px;
+}
+form ul {
+  margin-left: auto;
+  margin-right: auto;
+  width: 450px;
+  list-style: none;
+}
+form ul li {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+form label {
+  width: 130px;
+  display: inline-block;
+  margin-top: 3px;
+  padding: 3px;
+}
+.input {
+  height: 30px;
+  width: 220px;
+  padding: 5px 8px;
+}
+#add-submit {
+  margin-left: 60px;
+}
+img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.name {
+  font-weight: bold;
+}
+.number {
+  color: #888;
+}
