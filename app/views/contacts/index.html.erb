@@ -10,7 +10,7 @@
         <td> <img src='<%= contact.image %>'> </td>
         <td class='name'> <%= contact.first_name %> <%= contact.last_name %> </td>
         <td class='number'> <%= contact.phone_number %> </td>
-        <td> <%= button_to(contact_url(contact), method: :delete) do "X" end %></td>
+        <td> <%= button_to(contact_url(contact), method: :delete, class: :close) do "X" end %></td>
       </tr>
     <% end %>
   </table>
@@ -54,7 +54,7 @@
         </li>
       </ul>
 
-      <button type='submit' id='add-submit'>Add To Contacts</button>
+      <button type='submit' id='add-submit' class='submit'>Add To Contacts</button>
     </form>
     
     <form class='form hide' action='<%= contacts_import_url %>' id='import-contacts-form' method='POST'>
@@ -63,7 +63,7 @@
         name="authenticity_token"
         value="<%= form_authenticity_token %>">
       <textarea name='contacts[json]'></textarea>
-      <button type='submit' id='import-submit'>Import Contacts</button>
+      <button type='submit' id='import-submit' class='submit'>Import Contacts</button>
     </form>
     
     <form class='form hide' id='export-contacts-form'>

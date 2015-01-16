@@ -13,9 +13,6 @@
  *= require_tree .
  *= require_self
  */
-* :focus {
-  outline: none;
-}
 body {
 	font-family: helvetica;
 	color: #555;
@@ -26,6 +23,7 @@ h1 {
   text-align: center;
   border-bottom: 1px solid #aaa;
   width: 300px;
+  color: #7b906f;
 }
 .center {
   text-align: center;
@@ -37,15 +35,17 @@ button {
   background-color: #eee;
 }
 button:hover {
-  background-image: linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1))
+  background-image: linear-gradient(transparent,rgba(0,0,0,.1) 40%,rgba(0,0,0,.3))
 }
 button:active {
   border: 1px solid #777;
 }
+button:focus {
+  outline: none;
+}
 .margins {
   margin-left: auto;
   margin-right: auto;
-/*  display: block;*/
   text-align: center;
 }
 td {
@@ -55,11 +55,15 @@ td {
 #buttons {
   margin-top: 25px;
 }
+.submit, .close {
+  background: #7b906f;
+}
 .form {
-  margin-top: 30px;
-  border: 1px solid #eee;
+  border: 1px solid #7b906f;
   border-radius: 5px;
   width: 500px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 15px;
@@ -72,6 +76,9 @@ textarea {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+#import-contacts-form, #export-contacts-form, #stats-form {
+  display: none;
 }
 form ul {
   margin-left: auto;
@@ -114,8 +121,9 @@ img {
   color: rgb(202, 60, 60);
 }
 .show {
-  transition: display 400ms;
+  opacity: 1;
 }
 .hide {
-  display: none;
+  transition: opacity 200ms;
+  opacity: 0;
 }

@@ -21,8 +21,17 @@ window.onload = function() {
 
 function display(form) {
   if(window.currentForm.id != form) {
+
+    var listener = window.currentForm.addEventListener('transitionend', function() {
+      window.currentForm.style.display = 'none';
+      window.currentForm.removeEventListener(listener);
+      
+      window.currentForm = document.getElementById(form);
+      window.currentForm.style.display = 'block';
+      window.currentForm.classList.remove('hide');
+      
+    });
+    
     window.currentForm.classList.add('hide');
-    window.currentForm = document.getElementById(form);
-    window.currentForm.classList.remove('hide');
   }
 }

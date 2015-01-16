@@ -12536,3 +12536,1433 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 01:06:25
 
 
 Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 01:06:25 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 14:59:35 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (10.5ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (6.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.9ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (51.4ms)
+Completed 200 OK in 189ms (Views: 133.1ms | ActiveRecord: 33.3ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 14:59:35 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 14:59:35 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 14:59:35 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 14:59:35 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 14:59:35 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 14:59:35 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 14:59:35 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:00:41 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (2.5ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (2.5ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (80.1ms)
+Completed 200 OK in 240ms (Views: 209.7ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:00:41 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:00:41 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:00:41 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:00:41 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:00:41 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:00:41 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:00:41 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:01:17 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 240ms (Views: 236.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:01:18 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:01:18 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:01:18 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:01:18 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:01:18 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:01:18 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:01:18 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:01:21 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.5ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.8ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 70ms (Views: 66.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:01:21 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:01:21 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:01:21 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:01:21 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:01:21 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:01:21 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:01:21 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:10:53 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (1.9ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (1.8ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 152ms (Views: 137.8ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:10:53 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:10:53 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:10:53 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:10:53 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:10:53 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:10:53 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:10:53 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:11:16 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 198ms (Views: 195.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:11:16 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:11:16 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:11:16 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:11:16 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:11:16 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:11:16 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:11:16 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:11:24 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.7ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 116ms (Views: 112.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:11:24 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:11:24 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:11:24 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:11:24 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:11:24 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:11:24 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:11:24 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:11:40 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 72ms (Views: 68.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:11:40 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:11:40 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:11:40 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:11:40 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:11:40 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:11:40 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:11:40 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:11:53 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.7ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 90ms (Views: 86.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:11:53 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:11:53 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:11:53 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:11:53 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:11:53 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:11:53 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:11:53 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:12:24 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 82ms (Views: 78.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:12:24 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:12:24 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:12:24 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:12:24 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:12:24 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:12:24 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:12:24 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:12:52 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.8ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 89ms (Views: 85.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:12:52 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:12:52 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:12:52 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:12:52 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:12:52 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:12:52 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:12:52 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:13:04 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.9ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.9ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 124ms (Views: 120.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:13:05 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:13:05 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:13:05 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:13:05 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:13:05 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:13:05 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:13:05 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:14:25 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 117ms (Views: 112.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:14:26 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:14:26 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:14:26 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:14:26 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:14:26 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:14:26 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:14:26 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:16:33 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (3.3ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (2.3ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.8ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.9ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (49.8ms)
+Completed 200 OK in 323ms (Views: 300.6ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:16:34 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:16:34 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:16:34 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:16:34 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:16:34 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:16:34 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:16:34 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:19:10 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (2.2ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (2.8ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (1.2ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (1.3ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (44.8ms)
+Completed 200 OK in 354ms (Views: 335.7ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:19:10 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:19:10 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:19:10 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:19:10 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:19:10 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:19:10 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:19:10 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:20:05 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.9ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 156ms (Views: 152.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:20:05 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:20:05 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:20:05 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:20:05 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:20:05 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:20:05 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:20:05 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:20:58 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:20:58 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:21:48 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (1.9ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (2.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.7ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (1.0ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 198ms (Views: 181.1ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:21:48 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:21:48 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:21:48 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:21:48 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:21:48 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:21:48 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:21:48 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:22:32 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.9ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 150ms (Views: 145.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:22:32 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:22:32 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:22:32 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:22:32 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:22:32 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:22:32 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:22:32 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:22:48 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.7ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 92ms (Views: 88.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:22:48 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:22:48 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:22:48 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:22:48 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:22:48 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:22:48 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:22:48 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:25:09 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (1.5ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (2.0ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.9ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (41.8ms)
+Completed 200 OK in 274ms (Views: 260.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:25:10 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:25:10 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:25:10 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:25:10 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:25:10 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:25:10 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:25:10 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:25:21 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 92ms (Views: 88.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:25:21 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:25:21 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:25:21 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:25:21 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:25:21 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:25:21 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:25:21 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:25:29 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.4ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.7ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 73ms (Views: 69.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:25:29 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:25:29 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:25:29 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:25:29 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:25:29 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:25:29 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:25:29 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:26:14 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 130ms (Views: 126.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:26:14 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:26:14 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:26:14 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:26:14 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:26:14 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:26:14 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:26:14 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:27:36 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (1.4ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (1.8ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.7ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 218ms (Views: 202.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:27:37 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:27:37 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:27:37 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:27:37 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:27:37 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:27:37 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:27:37 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:27:55 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 159ms (Views: 155.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:27:55 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:27:55 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:27:55 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:27:55 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:27:55 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:27:55 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:27:55 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:31:55 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (1.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (6.5ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.8ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (61.8ms)
+Completed 200 OK in 328ms (Views: 304.2ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:31:56 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:31:56 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:31:56 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:31:56 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:31:56 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:31:56 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:31:56 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:32:50 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.8ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (1.0ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.7ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 125ms (Views: 120.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:32:50 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:32:50 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:32:50 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:32:50 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:32:50 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:32:50 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:32:50 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:33:32 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.7ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.9ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 288ms (Views: 283.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:33:32 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:33:32 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:33:32 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:33:32 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:33:32 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:33:32 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:33:32 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:33:41 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:33:41 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:34:00 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 83ms (Views: 79.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:34:01 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:34:01 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:34:01 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:34:01 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:34:01 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:34:01 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:34:01 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:34:55 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 95ms (Views: 91.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:34:55 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:34:55 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:34:55 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:34:56 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:34:56 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:34:56 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:34:56 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:36:56 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.8ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (1.1ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (1.2ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 242ms (Views: 232.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:36:57 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:36:57 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:36:57 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:36:57 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:36:57 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:36:57 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:36:57 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:37:05 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:37:05 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:37:35 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 92ms (Views: 89.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:37:35 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:37:35 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:37:35 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:37:36 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:37:36 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:37:36 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:37:36 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:38:18 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.9ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 102ms (Views: 98.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:38:18 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:38:18 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:38:18 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:38:18 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:38:18 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:38:18 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:38:18 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:39:02 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.8ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (1.0ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.8ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 199ms (Views: 195.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:39:02 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:39:02 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:39:02 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:39:02 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:39:02 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:39:02 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:39:02 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:39:08 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.6ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.7ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 64ms (Views: 60.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:39:08 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:39:08 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:39:08 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:39:08 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:39:08 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:39:08 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:39:08 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:41:04 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.5ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 103ms (Views: 100.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:41:04 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:41:04 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:41:04 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:41:04 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:41:04 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:41:04 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:41:04 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:41:10 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.5ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.9ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 64ms (Views: 60.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:41:10 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:41:10 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:41:10 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:41:10 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:41:10 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:41:10 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:41:10 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:41:34 -0800
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.4ms)[0m  SELECT "contacts".* FROM "contacts"
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  Rendered contacts/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 115ms (Views: 112.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:41:34 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:41:34 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:41:34 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:41:34 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:41:34 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:41:34 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:41:34 -0800
+
+
+Started POST "/contacts" for 127.0.0.1 at 2015-01-16 15:42:53 -0800
+Processing by ContactsController#create as HTML
+  Parameters: {"authenticity_token"=>"aciqbRtD6O+VYwy0DCZyCI3kNCXnABzItLspEIe1T8k=", "contact"=>{"first_name"=>"White", "last_name"=>"Walker", "phone_number"=>"NA", "image"=>"http://www.asset1.net/tv/pictures/show/game-of-thrones/Game-Of-Thrones-Houses-Stark-16x9-1.jpg"}}
+  [1m[35m (5.5ms)[0m  BEGIN
+  [1m[36mContact Exists (10.4ms)[0m  [1mSELECT  1 AS one FROM "contacts"  WHERE ("contacts"."phone_number" = 'NA' AND "contacts"."first_name" = 'White' AND "contacts"."last_name" = 'Walker') LIMIT 1[0m
+  [1m[35mSQL (16.8ms)[0m  INSERT INTO "contacts" ("created_at", "first_name", "image", "last_name", "phone_number", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2015-01-16 23:42:53.237815"], ["first_name", "White"], ["image", "http://www.asset1.net/tv/pictures/show/game-of-thrones/Game-Of-Thrones-Houses-Stark-16x9-1.jpg"], ["last_name", "Walker"], ["phone_number", "NA"], ["updated_at", "2015-01-16 23:42:53.237815"]]
+  [1m[36m (7.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mEvent Load (2.0ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mEvent Exists (3.0ms)[0m  SELECT  1 AS one FROM "events"  WHERE ("events"."name" = 'add_contact' AND "events"."id" != 1) LIMIT 1
+  [1m[36mSQL (2.8ms)[0m  [1mUPDATE "events" SET "times" = $1, "updated_at" = $2 WHERE "events"."id" = 1[0m  [["times", 7], ["updated_at", "2015-01-16 23:42:53.290690"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 238ms (ActiveRecord: 52.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:42:53 -0800
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (0.6ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  [1m[35mEvent Load (1.0ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.9ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (1.2ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  Rendered contacts/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 117ms (Views: 111.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:42:53 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:42:53 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:42:53 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:42:53 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:42:53 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:42:53 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:42:53 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:47:23 -0800
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (18.0ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  [1m[35mEvent Load (8.7ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (1.8ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (1.5ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  Rendered contacts/index.html.erb within layouts/application (74.4ms)
+Completed 200 OK in 461ms (Views: 417.4ms | ActiveRecord: 30.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:47:23 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:47:23 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:47:23 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:47:23 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:47:23 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:47:23 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:47:23 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:48:04 -0800
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (0.6ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  [1m[35mEvent Load (0.9ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.7ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  Rendered contacts/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 137ms (Views: 133.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:48:04 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:48:04 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:48:04 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:48:04 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:48:04 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:48:04 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:48:04 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:49:05 -0800
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (0.7ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  [1m[35mEvent Load (1.2ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (1.0ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.7ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  Rendered contacts/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 146ms (Views: 140.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:49:05 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:49:05 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:49:05 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:49:05 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:49:05 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:49:05 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:49:05 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:49:54 -0800
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (2.3ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  [1m[35mEvent Load (1.8ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.8ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  Rendered contacts/index.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 297ms (Views: 262.1ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:49:55 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:49:55 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:49:55 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:49:55 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:49:55 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:49:55 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:49:55 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:50:19 -0800
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (0.5ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  [1m[35mEvent Load (0.9ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  Rendered contacts/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 116ms (Views: 112.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:50:19 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:50:19 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:50:19 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:50:19 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:50:19 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:50:19 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:50:19 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-16 15:50:35 -0800
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (0.8ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'add_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."name" = 'import_contacts'  ORDER BY "events"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."name" = 'delete_contact'  ORDER BY "events"."id" ASC LIMIT 1
+  Rendered contacts/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 111ms (Views: 107.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-16 15:50:35 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-16 15:50:35 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-16 15:50:35 -0800
+
+
+Started GET "/assets/contacts.css?body=1" for 127.0.0.1 at 2015-01-16 15:50:35 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-16 15:50:35 -0800
+
+
+Started GET "/assets/contacts.js?body=1" for 127.0.0.1 at 2015-01-16 15:50:35 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-16 15:50:35 -0800
