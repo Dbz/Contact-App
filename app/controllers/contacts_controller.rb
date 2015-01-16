@@ -19,7 +19,7 @@ class ContactsController < ApplicationController
   
   def import
     JSON.parse(params[:contacts][:json]).each do |person|
-      @contact = Contact.create(person)
+      @contact = Contact.where(person).first_or_create!
     end
     redirect_to root_url
   end

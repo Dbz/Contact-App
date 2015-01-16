@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150116055328) do
+ActiveRecord::Schema.define(version: 20150116075647) do
 
   create_table "contacts", force: true do |t|
     t.string   "first_name"
@@ -21,5 +21,7 @@ ActiveRecord::Schema.define(version: 20150116055328) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "contacts", ["first_name", "last_name", "phone_number"], name: "index_contacts_on_first_name_and_last_name_and_phone_number", unique: true
 
 end
