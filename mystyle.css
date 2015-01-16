@@ -71,3 +71,9 @@ form label {
 #add-submit {
   margin-left: 60px;
 }
+img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 10px;
+}
