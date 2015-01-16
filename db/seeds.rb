@@ -1,10 +1,15 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Event.where(
+  name: "add_contact",
+).first_or_create!
+
+Event.where(
+  name: "import_contacts",
+).first_or_create!
+
+Event.where(
+  name: "delete_contact",
+).first_or_create!
+
 Contact.where(
   first_name: "Daniel",
   last_name: "Burt",
@@ -35,3 +40,9 @@ Contact.where(
   phone_number: "654-563-4309",
   image: "http://i.imgur.com/6JHgc18.gif"
 ).first_or_create!
+
+Event.increment(:add_contact)
+Event.increment(:add_contact)
+Event.increment(:add_contact)
+Event.increment(:add_contact)
+Event.increment(:add_contact)

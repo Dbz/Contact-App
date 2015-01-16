@@ -10,6 +10,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.save
       @contact = Contact.new
+      Event.increment(:add_contact)
     else
       flash[:errors] = @contact.errors.full_messages
       flash[:contact_params] = contact_params
@@ -21,12 +22,14 @@ class ContactsController < ApplicationController
     JSON.parse(params[:contacts][:json]).each do |person|
       @contact = Contact.where(person).first_or_create!
     end
+    Event.increment(:import_contacts)
     redirect_to root_url
   end
   
   def destroy
     @contact = Contact.find(params[:id])
     @contact.destroy
+    Event.increment(:delete_contact)
     redirect_to root_url
   end
   

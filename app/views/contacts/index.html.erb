@@ -18,6 +18,7 @@
     <button id='add-contact-button'> Add Contact </button>
     <button id='import-contacts-button'> Import Contacts </button>
     <button id='export-contacts-button'> Export Contacts </button>
+    <button id='event-tracker-button'> Event Tracking </button>
   </div>
 
     <form action='<%= contacts_url %>' method='POST' class='form show' id='add-contact-form'>
@@ -67,6 +68,10 @@
     
     <form class='form hide' id='export-contacts-form'>
       <textarea><%= @contacts.to_json(except: [:created_at, :updated_at, :id]) %></textarea>
+    </form>
+    
+    <form class='form hide' id='stats-form'>
+      <textarea><%= display_events %></textarea>
     </form>
 
 </body>

@@ -13,6 +13,10 @@ window.onload = function() {
   document.getElementById('export-contacts-button').addEventListener('click', function(event) {
     display('export-contacts-form');
   });
+  
+  document.getElementById('event-tracker-button').addEventListener('click', function(event) {
+    display('stats-form');
+  });
 }
 
 function display(form) {
