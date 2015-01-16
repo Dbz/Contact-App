@@ -6,8 +6,10 @@ body {
 	color: #555;
 }
 h1 {
-  padding-top: 50px;
+  padding: 50px 0 10px 0;
   text-align: center;
+  border-bottom: 1px solid #aaa;
+  width: 700px;
 }
 .center {
   text-align: center;
@@ -27,7 +29,7 @@ button:active {
 .margins {
   margin-left: auto;
   margin-right: auto;
-  display: block;
+/*  display: block;*/
   text-align: center;
 }
 td {
