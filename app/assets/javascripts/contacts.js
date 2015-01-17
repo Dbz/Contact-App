@@ -24,7 +24,7 @@ function display(form) {
 
     var listener = window.currentForm.addEventListener('transitionend', function() {
       window.currentForm.style.display = 'none';
-      window.currentForm.removeEventListener(listener);
+      window.currentForm.removeEventListener('transitionend', listener);
       
       window.currentForm = document.getElementById(form);
       window.currentForm.style.display = 'block';
