@@ -1,18 +1,20 @@
 <html>
 <head>
   <title>Contact App</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="contacts.js"></script>
 </head>
 <body>
   <h1 class='margins'> Contacts </h1>
   <table id='contacts-table' class='margins'>
-    <% @contacts.each do |contact| %>
+    <!-- <% @contacts.each do |contact| %>
       <tr>
         <td> <img src='<%= contact.image %>'> </td>
         <td class='name'> <%= contact.first_name %> <%= contact.last_name %> </td>
         <td class='number'> <%= contact.phone_number %> </td>
         <td> <%= button_to(contact_url(contact), method: :delete, class: :close) do "X" end %></td>
       </tr>
-    <% end %>
+    <% end %> -->
   </table>
   <div id='buttons' class='margins'>
     <button id='add-contact-button'> Add Contact </button>
@@ -21,12 +23,8 @@
     <button id='event-tracker-button'> Event Tracking </button>
   </div>
 
-    <form action='<%= contacts_url %>' method='POST' class='form show' id='add-contact-form'>
-      <input
-        type="hidden"
-        name="authenticity_token"
-        value="<%= form_authenticity_token %>">
-      <% if flash[:errors] %>
+    <form class='form show' id='add-contact-form'>
+      <!-- <% if flash[:errors] %>
         <ul class='margins'>
           <% flash[:errors].each do |error| %>
             <li class='red'>
@@ -34,23 +32,23 @@
             </li>
           <% end %>
         </ul>
-      <% end %>
+      <% end %> -->
       <ul class='form-inputs-list'>
         <li>
           <label for='first-name'>First Name</label>
-          <input type='text' id='first-name' class='input' name='contact[first_name]' value='<%= @contact.first_name %>'>
+          <input type='text' id='first-name' class='input' name='contact[first_name]'>
         </li>
         <li>
           <label for='last-name'>Last Name</label>
-          <input type='text' id='last-name' class='input' name='contact[last_name]' value='<%= @contact.last_name %>'>
+          <input type='text' id='last-name' class='input' name='contact[last_name]'>
         </li>
         <li>
           <label for='number'>Phone Number</label>
-          <input type='text' id='number' class='input' name='contact[phone_number]' value='<%= @contact.phone_number %>'>
+          <input type='text' id='number' class='input' name='contact[phone_number]'>
         </li>
         <li>
           <label for='image'>Image Url</label>
-          <input type='text' id='image' class='input' name='contact[image]' value='<%= @contact.image %>'>
+          <input type='text' id='image' class='input' name='contact[image]'>
         </li>
       </ul>
 
@@ -67,7 +65,7 @@
     </form>
     
     <form class='form hide' id='export-contacts-form'>
-      <textarea><%= @contacts.to_json(except: [:created_at, :updated_at, :id]) %></textarea>
+      <textarea id='export-area'></textarea>
     </form>
     
     <form class='form hide' id='stats-form'>
