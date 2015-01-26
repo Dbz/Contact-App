@@ -55,12 +55,8 @@
       <button type='submit' id='add-submit' class='submit'>Add To Contacts</button>
     </form>
     
-    <form class='form hide' action='<%= contacts_import_url %>' id='import-contacts-form' method='POST'>
-      <input
-        type="hidden"
-        name="authenticity_token"
-        value="<%= form_authenticity_token %>">
-      <textarea name='contacts[json]'></textarea>
+    <form class='form hide' id='import-contacts-form'>
+      <textarea id='import-area'></textarea>
       <button type='submit' id='import-submit' class='submit'>Import Contacts</button>
     </form>
     
@@ -69,7 +65,7 @@
     </form>
     
     <form class='form hide' id='stats-form'>
-      <textarea><%= display_events %></textarea>
+      <textarea id='tracker-area'></textarea>
     </form>
 
 </body>
