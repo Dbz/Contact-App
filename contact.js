@@ -6,6 +6,9 @@
     this.last   = last;
     this.number = number;
     this.image  = image;
+    
+    if(this.image == "")
+      this.image = "https://www.etsy.com/images/avatars/default_avatar_75px.png";
   }
   
   Contact.prototype.key = function() {
