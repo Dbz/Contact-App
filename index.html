@@ -2,19 +2,12 @@
 <head>
   <title>Contact App</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="contact.js"></script>
   <script src="contacts.js"></script>
 </head>
 <body>
   <h1 class='margins'> Contacts </h1>
   <table id='contacts-table' class='margins'>
-    <!-- <% @contacts.each do |contact| %>
-      <tr>
-        <td> <img src='<%= contact.image %>'> </td>
-        <td class='name'> <%= contact.first_name %> <%= contact.last_name %> </td>
-        <td class='number'> <%= contact.phone_number %> </td>
-        <td> <%= button_to(contact_url(contact), method: :delete, class: :close) do "X" end %></td>
-      </tr>
-    <% end %> -->
   </table>
   <div id='buttons' class='margins'>
     <button id='add-contact-button'> Add Contact </button>

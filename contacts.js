@@ -1,6 +1,7 @@
 (function() {
-  window.contacts = window.contacts || [];
-  window.events   = window.events || {
+  window.contacts   = window.contacts || [];
+  window.contactDOM = window.contactDOM || {};
+  window.events     = window.events || {
     add: 0,
     remove: 0,
     imports: 0,
@@ -37,7 +38,10 @@
         first: document.getElementById('first-name').value,
         last: document.getElementById('last-name').value,
         number: document.getElementById('number').value,
-        image: document.getElementById('image').value 
+        image: document.getElementById('image').value,
+        key: function() {
+          return this.first + this.last + this.number + this.image;
+        }
       };
       if(contact.image == "")
         contact.image = "https://www.etsy.com/images/avatars/default_avatar_75px.png";
@@ -54,6 +58,9 @@
       event.preventDefault();
       var contacts = JSON.parse(document.getElementById("import-area").value);
       contacts.forEach(function(contact) {
+        contact.key = function() {
+          return this.first + this.last + this.number + this.image;
+        }
         addContact(contact);
       });
       window.events.imports += 1;
@@ -95,7 +102,26 @@
     tr.appendChild(x);
   
     contacts.appendChild(tr);
+    
+    var key = contact.key();
+    window.contactDOM[key] = tr;
+    
+
+    button.addEventListener('click', function(event) {
+      removeContact(contact);
+    });
+  }
   
+  function removeContact(contact) {
+    window.contacts.forEach(function(c, i) {
+      if(JSON.stringify(c) == JSON.stringify(contact))
+        window.contacts.splice(i, 1);
+    });
+    
+    var key = contact.key();
+    var tr = window.contactDOM[key];
+    tr.parentNode.removeChild(tr);
+      
   }
 
   function display(form) {
@@ -116,30 +142,11 @@
   }
   
   function addDefaultContacts() {
-    addContact({
-      first: "Arya",
-      last: "Stark",
-      number: "659-234-1231",
-      image: "http://flavorwire.files.wordpress.com/2013/07/screen-shot-2013-07-01-at-5-27-11-pm.png"
-    });
-    addContact({
-      first: "Ned",
-      last: "Stark",
-      number: "659-234-1231",
-      image: "http://i.dailymail.co.uk/i/pix/2014/05/10/article-2625187-1DBA0F6200000578-443_306x423.jpg"
-    });
-    addContact({
-      first: "Little",
-      last: "Finger",
-      number: "659-234-1231",
-      image: "http://i.imgur.com/6JHgc18.gif"
-    });
-    addContact({
-      first: "White",
-      last: "Walker",
-      number: "659-234-1231",
-      image: "http://www.asset1.net/tv/pictures/show/game-of-thrones/Game-Of-Thrones-Houses-Stark-16x9-1.jpg"
-    });
+    
+    addContact(new window.Contact("Arya", "Stark", "659-234-1231", "http://flavorwire.files.wordpress.com/2013/07/screen-shot-2013-07-01-at-5-27-11-pm.png"));
+    addContact(new window.Contact("Ned", "Stark", "659-234-1231", "http://i.dailymail.co.uk/i/pix/2014/05/10/article-2625187-1DBA0F6200000578-443_306x423.jpg"));
+    addContact(new window.Contact("Little", "Finger", "659-234-1231", "http://i.imgur.com/6JHgc18.gif"));
+    addContact(new window.Contact("White", "Walker", "659-234-1231", "http://www.asset1.net/tv/pictures/show/game-of-thrones/Game-Of-Thrones-Houses-Stark-16x9-1.jpg"));
   }
   
   function isUniqueContact(contact) {
