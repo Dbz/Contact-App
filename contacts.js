@@ -77,17 +77,22 @@
     image.appendChild(img);
     tr.appendChild(image);
   
-    var first = document.createElement("td");
-    first.innerHTML = contact.first;
-    tr.appendChild(first);
-  
-    var last = document.createElement("td");
-    last.innerHTML = contact.last;
-    tr.appendChild(last);
+    var fullName = document.createElement("td");
+    fullName.innerHTML = contact.first + " " + contact.last;
+    fullName.setAttribute("class", "name");
+    tr.appendChild(fullName);
   
     var number = document.createElement("td");
     number.innerHTML = contact.number;
+    number.setAttribute("class", "number");
     tr.appendChild(number);
+    
+    var x = document.createElement("td");
+    var button = document.createElement("button");
+    button.innerHTML = "X";
+    button.setAttribute("class", "close");
+    x.appendChild(button);
+    tr.appendChild(x);
   
     contacts.appendChild(tr);
   
