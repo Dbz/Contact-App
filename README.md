@@ -1,6 +1,6 @@
 # Contact-App
 
-Live Link: https://hall-contact-app.herokuapp.com/
+Live Link: http://dbz.github.io/Contact-App/
 
 Hall Frontend Challenge - JSON Contact List Importer/Exporter
 
@@ -41,4 +41,4 @@ user navigates away from the page and comes back
 * Extra bonus points for how the persistent data is stored
 
 
-Live Link: https://hall-contact-app.herokuapp.com/
+Live Link: http://dbz.github.io/Contact-App/
