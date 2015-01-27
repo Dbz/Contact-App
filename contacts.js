@@ -1,6 +1,5 @@
 (function() {
   window.contacts   = window.contacts || [];
-  window.contactDOM = window.contactDOM || {};
   window.events     = window.events || {
     add: 0,
     remove: 0,
@@ -103,11 +102,12 @@
     tr.appendChild(x);
   
     contacts.appendChild(tr);
+    contact.dom = tr;
     
-    var key = contact.key();
-    window.contactDOM[key] = tr;
-    
-
+    // var key = contact.key();
+    // window.contactDOM[key] = tr;
+    //
+    //
     button.addEventListener('click', function(event) {
       removeContact(contact);
     });
@@ -118,12 +118,10 @@
   function removeContact(contact) { // Removes contact from window.contacts and DOM
     window.contacts.forEach(function(c, i) {
       if(contact.key() == c.key())
-        window.contacts.splice(i, 1);
+        window.contacts.splice(i, 1);        
     });
     
-    var key = contact.key();
-    var tr = window.contactDOM[key];
-    tr.parentNode.removeChild(tr);
+    contact.dom.parentNode.removeChild(contact.dom);
     
     window.events.remove += 1;
       
